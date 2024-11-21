@@ -1,0 +1,20 @@
+{user && <Typography variant="h4">Hello, {user.name}!</Typography>}
+        <Typography variant="body1">Welcome to your dashboard.</Typography>
+
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    if (!loggedUser) {
+      navigate("/");
+    } else {
+      setUser(loggedUser);
+    }
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  };

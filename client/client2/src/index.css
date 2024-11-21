@@ -1,0 +1,26 @@
+/* App.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Matches the Dashboard's dark background */
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Optional: Ensure consistent font */
+    min-height: 100vh;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the entire viewport is filled */
+  }
+  
+  ul, li, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: inherit; /* Keeps links consistent with the dark theme */
+    text-decoration: none;
+  }
+  
